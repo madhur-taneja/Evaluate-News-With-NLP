@@ -1,2 +1,6 @@
 node_modules
 dist
+.idea
+.idea/vcs.xml
+.env
+stale_outputs_checked
