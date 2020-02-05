@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+main {
+    /*Display Design*/
+    display: grid;
+    grid-gap: 30px;
+
+    /*Spacing*/
+    padding: 0 1.5rem;
+}

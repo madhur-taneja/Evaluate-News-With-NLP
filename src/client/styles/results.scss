@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+section {
+    h2 {
+        text-align: center;
+    }
+
+    .response-container {
+        /*Display Design*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: justify;
+    }
+
+    .card-container {
+        /*Display Design*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 40%;
+
+        /*Spacing*/
+        margin: 1rem;;
+        margin-bottom: 10px;
+        padding: 40px;
+
+        /*Color-scheme*/
+        background: #99A0D4;
+        color: $white;
+
+        /*Additional Styling*/
+        border: $card-border;
+    }
+
+    .response-value {
+        margin: 0.5rem
+    }
+}

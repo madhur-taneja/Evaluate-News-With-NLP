@@ -1,16 +1,27 @@
-function handleSubmit(event) {
-    event.preventDefault()
+function handleSubmitForAylien(event) {
+    event.preventDefault();
+    const url = document.getElementById('url').value;
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    checkForName(formText)
+    if (Client.validateUrl(url)) {
+        fetch("http://localhost:3000/api", {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({url: url})
+        })
+        .then(res => res.json())
+        .then((res) => {
+            document.getElementById('polarity').innerHTML = res.polarity
+            document.getElementById('subjectivity').innerHTML = res.subjectivity
+            document.getElementById('polarity-confidence').innerHTML = res.polarity_confidence
+            document.getElementById('subjectivity-confidence').innerHTML = res.subjectivity_confidence
+        })
+    } else {
+        alert("This is not a valid URL. Please check again!")
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    }
 }
 
-export { handleSubmit }
+export { handleSubmitForAylien }

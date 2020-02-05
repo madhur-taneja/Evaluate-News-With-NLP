@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+/* Global */
+body {
+    /*Display Design*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: $text-size;
+
+    /*Color-scheme*/
+    background: $grey;
+
+    /*Spacing*/
+    margin: 0;
+}

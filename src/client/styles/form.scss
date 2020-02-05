@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+form {
+
+    input {
+        padding: 0.5rem 2rem;
+        margin: 0.625rem 0;
+    }
+
+    .submit-button {
+        color: $white;
+        background-color: $btn-background;
+        &:hover {
+            box-shadow: 5px 5px 8px #999999;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+
+       #url {
+        width: 90%;
+       }
+    }
+}
